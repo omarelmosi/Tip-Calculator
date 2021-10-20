@@ -74,10 +74,14 @@ input {
     font-size: 18px;
 }
 
-input[type=number]::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    display: none;
-    opacity: 0;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 .tipAmount-container {
@@ -237,7 +241,7 @@ input[type=number]::-webkit-inner-spin-button {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .container {
         justify-content: unset;
     }
@@ -292,11 +296,5 @@ input[type=number]::-webkit-inner-spin-button {
     #logo {
         position: unset;
         margin: 40px 0;
-    }
-}
-
-@media (max-width: 600px){
-    .calc-container{
-        width: 480px;
     }
 }
