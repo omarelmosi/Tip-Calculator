@@ -58,7 +58,7 @@ function tipCalc(bill, percent, persons) {
   let totalAmount = bill + totalTip;
   let totalPerPerson = totalAmount / persons;
   resultPerPerson.textContent = `$${tipPerPerson.toFixed(2)}`;
-  resultAll.textContent = `$${tipPerPerson.toFixed(2)}`;
+  resultAll.textContent = `$${totalPerPerson.toFixed(2)}`;
 }
 resetBtn.addEventListener("click", function (e) {
   bill = 0;
@@ -68,9 +68,9 @@ resetBtn.addEventListener("click", function (e) {
     e.classList.remove("checked");
   });
 
-  customInput.value = ""
-  personInput.value = ""
-  bilInput.value = ""
-  resultAll.textContent = `$0.00`
-  resultPerPerson.textContent = `$0.00`
+  customInput.value = "";
+  personInput.value = "";
+  bilInput.value = "";
+  resultAll.textContent = `$0.00`;
+  resultPerPerson.textContent = `$0.00`;
 });
